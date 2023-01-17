@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body>
+    <div class="card" href="/">
+        <div class="logo"><img src="/images/ikeaPic.png"></div>
+        <div class="instructions">
+            <h4>Application to notify user via email of discounted sale on any IKEA item offered on their website</h4>
+            <p>Step 1: Find any item you wish to be notified about on the IKEA website</p>
+            <p>Step 2: Copy the URL from the IKEA website into the input field labeled "item url:"</p>
+            <p>Step 3: Enter a email address you wish to recieve a notification</p>
+            <p>Step 4: Enter a whole number for the price you would like to recieve a email about if the item is ever listed at or below your number</p>
+            <p>Step 5: Click the submit button. Leave the application open. The application will regularly compare your requested price to the listed price</p>
+        </div>
+        <form action="/update" class="formHolder" method="POST">
+            <label for="url" class="url"></label>
+            <input type="text" id="urlInput" name="urlInput" placeholder="item url:">
+            <label for="email" class="email"></label>
+            <input type="text" id="emailInput" name="emailInput" placeholder="email:">
+            <label for="sale" class="salePrice"></label>
+            <input type="text" id="saleInput" name="saleInput" placeholder="desired sale price:">
+            <button class="subBtn" id="subBtn">submit</button>
+        </form>
+    </div>
+</body>
+</html>
